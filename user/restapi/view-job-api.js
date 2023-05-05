@@ -24,10 +24,10 @@ function populateTableDetails({ id, jobTitle, jobDescription, location, industry
     row.insertCell(1).innerHTML = jobTitle
     row.insertCell(2).innerHTML = jobDescription
     row.insertCell(3).innerHTML = location
-    row.insertCell(3).innerHTML = industry 
-    row.insertCell(3).innerHTML = qualification 
-    row.insertCell(3).innerHTML = applicationRequirement 
-    row.insertCell(3).innerHTML = postedDate 
+    row.insertCell(4).innerHTML = industry 
+    row.insertCell(5).innerHTML = qualification 
+    row.insertCell(6).innerHTML = applicationRequirement 
+    row.insertCell(7).innerHTML = postedDate 
 }
 
 apiGetJobDetails()
