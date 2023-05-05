@@ -52,7 +52,7 @@
           <label class="logo">Job Portal</label>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active ">
-              <a class="nav-link" href="home.html">Home</a>
+              <a class="nav-link" href="admin-dash.html">Back</a>
             </li>
           </ul>
           <ul>
@@ -83,8 +83,7 @@
                 <div class="alert alert-danger" role="alert" id="errMsg">
                 </div>
             </div>
-                        <h3 style="color: green;">Create jobs</h3>
-
+            <div  align="center" ><h3 style="color: green;">Post Jobs</h3></div>
         </div>
         <div><br></div>
         <div class="col-12">
@@ -99,7 +98,7 @@
             <div class="row d-flex justify-content-evenly">
             <div class="col-6">
                 <label for="jd">Job Description</label>
-                <input type="password" class="form-control" id="jd" placeholder="Description" name="jobDescription" required>
+                <input type="textarea" class="form-control" id="jd" placeholder="Description" name="jobDescription" required>
                 
             </div>
             <div class="col-12">
@@ -146,7 +145,7 @@
         <div><br></div>
     </div>
         <div class="row">
-            <div class="col">
+            <div class="col d-flex justify-content-evenly">
                 <input type="submit" value="Jobpost" class="btn btn-success">
             </div>
         </div>
@@ -161,7 +160,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    User Created Successfully
+                    Job Created Successfully
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -171,7 +170,7 @@
     </div>
 
     <!-- here you need to import your scripts -->
-    <script src="./restapi/signup-api.js"></script>
+    <script src="./restapi/jobPost-api.js"></script>
 </body>
 
 </html>
