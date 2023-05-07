@@ -2,20 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Job post</title>
-    <style>
-        .bg-blue {
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Job post</title>
+  <style>
+    .bg-blue {
       background-color: blue;
+      height: 80px;
     }
 
     .navbar-nav .nav-link {
@@ -34,7 +37,7 @@
       font-size: 35px;
       line-height: 80px;
       padding: 0 1px;
-      font-weight: bold;
+      font-weight: normal;
     }
 
     .navbar-nav .nav-item.active .nav-link {
@@ -47,130 +50,132 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
-        <div class="container-fluid">
-          <label class="logo">Job Portal</label>
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active ">
-              <a class="nav-link" href="admin-dash.html">Back</a>
-            </li>
-          </ul>
-          <ul>
-            <li style="display: inline-block;padding: 20px;">
-    
-    
-    
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-    
-                  <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="nav-link btn-white" href="home.html">Logout</a>
-                  </li>
-                </ul>
-              </div>
-    
-          </ul>
-        </div>
-      </nav>
-      
-    <form class="container" id="formJobpost">
-        <div class="row">
-            <div class="col">
-                <div class="alert alert-danger" role="alert" id="errMsg">
-                </div>
-            </div>
-            <div  align="center" ><h3 style="color: green;">Post Jobs</h3></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+    <div class="container-fluid">
+      <label class="logo">Job Portal</label>
+      <ul>
+        <li style="display: inline-block;padding: 20px;">
+
+
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="nav-link btn-white ms-2" href="admin-dash.html"><i
+                    class="fa fa-arrow-circle-left"></i></i>Back</a>
+              </li>
+              <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="nav-link btn-white ms-2" href="home.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+
+      </ul>
+    </div>
+  </nav>
+
+  <form class="container" id="formJobpost">
+    <div class="row">
+
+      <div align="center">
+        <h3 style="color: green;">Post Jobs</h3>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="row d-flex justify-content-evenly">
+        <div class=" col-6">
+          <label for="jtitle">Job title</label>
+          <input type="text" class="form-control" id="jtitle" placeholder="Job title" name="jobTitle" required>
+
         </div>
         <div><br></div>
         <div class="col-12">
-            <div class="row d-flex justify-content-evenly">
-                <div class=" col-6">
-                <label for="jtitle">Job title</label>
-                <input type="text" class="form-control" id="jtitle" placeholder="Job title" name="jobTitle" required>
-                
+          <div class="row d-flex justify-content-evenly">
+            <div class="col-6">
+              <label for="jd">Job Description</label>
+              <input type="textarea" class="form-control" id="jd" placeholder="Description" name="jobDescription"
+                required>
+
             </div>
             <div><br></div>
             <div class="col-12">
-            <div class="row d-flex justify-content-evenly">
-            <div class="col-6">
-                <label for="jd">Job Description</label>
-                <input type="textarea" class="form-control" id="jd" placeholder="Description" name="jobDescription" required>
-                
-            </div>
-            <div class="col-12">
-                <div class="row d-flex justify-content-evenly">
-                    <div class=" col-6">
-                    <label for="loc">Location</label>
-                    <input type="text" class="form-control" id="loc" placeholder="Location" name="location" required>
-                    
+              <div class="row d-flex justify-content-evenly">
+                <div class=" col-6">
+                  <label for="loc">Location</label>
+                  <input type="text" class="form-control" id="loc" placeholder="Location" name="location" required>
+
                 </div>
                 <div><br></div>
-            </div>
-            <div class="col-12">
+              </div>
+              <div class="col-12">
                 <div class="row d-flex justify-content-evenly">
-                    <div class=" col-6">
+                  <div class=" col-6">
                     <label for="indu">Industry</label>
                     <input type="text" class="form-control" id="indu" placeholder="Industry" name="industry" required>
-                    
-                </div>
-                <div><br></div>
-            
-                <div class="col-12">
-                    <div class="row d-flex justify-content-evenly">
-                        <div class=" col-6">
-                        <label for="quli">Qualification</label>
-                        <input type="text" class="form-control" id="quli" placeholder="Qualification" name="qualification" required>
-                        
-                    </div>
-                    <div><br></div>
-            <div class="col-12">
-            <div class="row d-flex justify-content-evenly">
-                <div class="col-6">
-                    <label for="ar">Application Requirement</label>
-                    <input type="text" class="form-control" id="ar" placeholder="Application Requirement" name="applicationRequirement" required>
-                    
-            </div>
-            <div><br></div>
-        </div>
-        <div class="row d-flex justify-content-evenly">
-            <div class="col-6">
-                <label for="pd">PostedDate</label>
-                <input type="date" class="form-control" id="pd" placeholder="Posted Date" name="postedDate" required>
-                
-        </div>
-        <div><br></div>
-    </div>
-        <div class="row">
-            <div class="col d-flex justify-content-evenly">
-                <input type="submit" value="Jobpost" class="btn btn-success">
-            </div>
-        </div>
-    </form>
-</div>
-    <!-- Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Success</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Job Created Successfully
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- here you need to import your scripts -->
-    <script src="./restapi/jobPost-api.js"></script>
+                  </div>
+                  <div><br></div>
+
+                  <div class="col-12">
+                    <div class="row d-flex justify-content-evenly">
+                      <div class=" col-6">
+                        <label for="quli">Qualification</label>
+                        <input type="text" class="form-control" id="quli" placeholder="Qualification"
+                          name="qualification" required>
+
+                      </div>
+                      <div><br></div>
+                      <div class="col-12">
+                        <div class="row d-flex justify-content-evenly">
+                          <div class="col-6">
+                            <label for="ar">Application Requirement</label>
+                            <input type="text" class="form-control" id="ar" placeholder="Application Requirement"
+                              name="applicationRequirement" required>
+
+                          </div>
+                          <div><br></div>
+                        </div>
+                        <div class="row d-flex justify-content-evenly">
+                          <div class="col-6">
+                            <label for="pd">PostedDate</label>
+                            <input type="date" class="form-control" id="pd" placeholder="Posted Date" name="postedDate"
+                              required>
+
+                          </div>
+                          <div><br></div>
+                        </div>
+                        <div class="row">
+                          <div class="col d-flex justify-content-evenly">
+                            <input type="submit" value="Jobpost" class="btn btn-success">
+                          </div>
+                        </div>
+  </form>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Job Created Successfully
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- here you need to import your scripts -->
+  <script src="./restapi/jobPost-api.js"></script>
 </body>
 
 </html>

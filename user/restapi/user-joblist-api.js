@@ -13,7 +13,7 @@ function propulateActualData(table, jobposts) {
 
         const { id, jobTitle, location, industry } = job
         
-        const viewPageUrl = `./view-job.html?id=${id}`
+        const viewPageUrl = `./JobSeeker-view.html?id=${id}`
 
         const row = table.insertRow()
         row.insertCell(0).innerHTML = id
