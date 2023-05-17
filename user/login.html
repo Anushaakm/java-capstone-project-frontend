@@ -15,6 +15,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Login</title>
     <style>
+        body {
+  background-image: url('job.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
         .bg-blue {
       background-color: blue;
       height: 80px;
@@ -42,6 +48,11 @@
     .navbar-nav .nav-item.active .nav-link {
       color: white;
     }
+    #formLogin label {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    } 
   </style>
     
 </head>
@@ -75,6 +86,7 @@
           </ul>
         </div>
       </nav>
+      <div class="container">
     <div align="center">
 
     <form class="container" id="formLogin">
@@ -91,7 +103,7 @@
         <div class="col-12">
         <div class="row d-flex justify-content-evenly">
             <div class= "col-6 ">
-            <label for="txtUsNm">Username</label>
+            <label for="txtUsNm">User Name</label>
             <input type="text" class="form-control" id="txtUsNm" placeholder="Username" name="userName" required>
                 
             </div>
@@ -114,6 +126,7 @@
         </div>
         </div>
     </form>
+</div>
 </div>
     <!-- here you need to import your scripts -->
     <script src="./restapi/login-api.js"></script>

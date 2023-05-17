@@ -14,6 +14,7 @@ function propulateActualData(table, jobposts) {
         const { id, jobTitle, location, industry } = job
         const updatePageUrl = `./update-job.html?id=${id}`
         const viewPageUrl = `./view-job.html?id=${id}`
+        
 
         const row = table.insertRow()
         row.insertCell(0).innerHTML = id
@@ -23,6 +24,7 @@ function propulateActualData(table, jobposts) {
         row.insertCell(4).innerHTML = `
             <a href='${viewPageUrl}'>View</a> 
             <a class='ms-2' href='${updatePageUrl}'>Update</a> 
+            
             <a class='ms-2' onclick='showConfirmDeleteModal(${id})'>Delete</a> 
         `
     }

@@ -14,6 +14,8 @@ function propulateActualData(table, jobposts) {
         const { id, jobTitle, location, industry } = job
         
         const viewPageUrl = `./JobSeeker-view.html?id=${id}`
+        const applyPageUrl =`./apply-job.html?id=${id}`
+
 
         const row = table.insertRow()
         row.insertCell(0).innerHTML = id
@@ -21,7 +23,9 @@ function propulateActualData(table, jobposts) {
         row.insertCell(2).innerHTML = location
         row.insertCell(3).innerHTML = industry
         row.insertCell(4).innerHTML = `
-            <a href='${viewPageUrl}'>View</a> 
+            <a href='${viewPageUrl}'>View</a>
+            <a class='ms-2' href='${applyPageUrl}'>Apply</a> 
+             
         `
     }
 }
